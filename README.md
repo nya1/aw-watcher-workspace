@@ -14,7 +14,7 @@ git clone https://github.com/nya1/aw-watcher-workspace.git
 ```
 2. Install modules
 ```sh
-yarn install
+cd aw-watcher-workspace && yarn install
 ```
 3. Start the watcher
 ```sh
