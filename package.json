@@ -1,0 +1,17 @@
+{
+  "name": "aw-watcher-workspace",
+  "version": "0.1.0",
+  "description": "ActivityWatch watcher to automatically categorize applications usage based on the active workspace",
+  "main": "index.js",
+  "author": "nya1",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/nya1/aw-watcher-workspace.git"
+  },
+  "dependencies": {
+    "aw-client": "^0.3.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
