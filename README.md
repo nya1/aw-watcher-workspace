@@ -10,7 +10,7 @@ A lightweight Activity Watcher module to track the active workspace, each logged
 
 1. Clone
 ```sh
-git clone https://github.com/nya1/aw-watcher-workspace.git`
+git clone https://github.com/nya1/aw-watcher-workspace.git
 ```
 2. Install modules
 ```sh
