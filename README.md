@@ -1,7 +1,7 @@
 
 # aw-watcher-workspace
 
-Activity Watcher module to track the active workspace, each window activity will have the workspace context.
+A lightweight Activity Watcher module to track the active workspace, each logged activity will have the workspace context.
 
 ## Compatibility:
 - Tested on Ubuntu/Debian GNOME

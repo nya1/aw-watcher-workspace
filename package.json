@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "nya1",
   "license": "MIT",
+  "keywords": [
+    "aw", "activitywatch", "watcher", "workspace"
+  ],
   "repository": {
     "url": "https://github.com/nya1/aw-watcher-workspace.git"
   },
