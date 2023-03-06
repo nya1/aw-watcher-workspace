@@ -36,12 +36,15 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function parseXProp(keyName, stdout, type) {
+function parseXProp(keyName, stdout, type, fallback) {
   const regex = new RegExp(
     `${keyName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}.=.(.*)`
   );
   const valMatch = stdout.match(regex);
   if (!valMatch || typeof valMatch[1] === "undefined") {
+    if (typeof fallback !== 'undefined') {
+      return fallback;
+    }
     throw new Error(`parseXProp unable to find ${keyName} in string ${stdout}`);
   }
   const value = valMatch[1].replace("●", "").trim();
@@ -124,7 +127,8 @@ async function main() {
         activeDesktopIndex = parseXProp(
           "_NET_CURRENT_DESKTOP",
           activeWorkspace.stdout,
-          "number"
+          "number",
+          0
         );
 
         const focusedAppDbusRes = await exec(
