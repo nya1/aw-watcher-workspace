@@ -135,6 +135,11 @@ async function main() {
           `gdbus call -e -d org.gnome.Shell -o /org/gnome/Shell --method org.gnome.Shell.Eval "global.display.focus_window.get_wm_class()" | cut -d'"' -f 2`
         );
         focusedApp = focusedAppDbusRes.stdout.replace("\n", "").trim();
+
+	if (focusedApp.includes("TypeError: global.display.focus_window is null")) {
+	  focusedApp = undefined;
+	}
+
       } catch (err) {
         console.error(err);
       }
